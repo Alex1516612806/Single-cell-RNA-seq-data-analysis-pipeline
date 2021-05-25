@@ -11,6 +11,14 @@ output:
 
 # Introduction 
 
+The primary goal of this study is to identify gene expression difference between conditions using a toy dataset.
+
+Rmarkdown reference can be found in here: [Reference](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
+[Mathematics in Rmarkdown](https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html)
+
+[Seurat - Guided Clustering Tutorial](https://satijalab.org/seurat/v3.1/pbmc3k_tutorial.html)
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -31,18 +39,6 @@ library(DT)
 knitr::opts_knit$set(root.dir = "C:/Users/Alex1/Desktop/scRNAseq-template-master")
 
 ```
-
-
-
-# Goal
-
-The primary goal of this study is to identify gene expression difference between conditions using a toy dataset.
-
-Rmarkdown reference can be found in here: [Reference](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
-
-[Mathematics in Rmarkdown](https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html)
-
-[Seurat - Guided Clustering Tutorial](https://satijalab.org/seurat/v3.1/pbmc3k_tutorial.html)
 
 # Run Seurat strandard workflow
 
