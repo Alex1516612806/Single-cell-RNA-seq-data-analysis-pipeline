@@ -36,14 +36,14 @@ library(Seurat)
 library(enrichR)
 library(DT)
 
-knitr::opts_knit$set(root.dir = "C:/Users/Alex1/Desktop/scRNAseq-template-master")
+# Change the directory to the download file path where you save that 'col-data-scrna.csv' and 'count-data-scrna.csv' file location.
+knitr::opts_knit$set(root.dir = "C:/Users/Alex1/Desktop/scRNAseq-template-master/data")
 
 ```
 
 # Run Seurat strandard workflow
 
 ## Load dataset
-
 Using raw read count as input.
 
 
@@ -139,6 +139,7 @@ To cluster the cells, we next apply modularity optimization techniques such as t
 
 ## PCA plot colored by time
 
+This is a plot can be used to find cluster. The bigger the parameter, more precise of the resoultion.
 ```{r,echo=T,eval=T,message=T,warning=F,error=F}
 obj <- FindNeighbors(obj, dims = 1:10)
 obj <- FindClusters(obj, resolution = 0.5)
@@ -267,9 +268,13 @@ DT::datatable(head(enriched_combined$KEGG_2019_Mouse,n=20)[,c(-3,-5,-6,-7)], ext
               ))
 ```
 
+# Reference
+
+[Single Cell RNA-Seq Analysis] (https://ucdavis-bioinformatics-training.github.io/2021-August-Single-Cell-RNA-Seq-Analysis/base/welcome)
 
 # Session Infomation
 
+To improve reproducibility, we usually print out the session information, which contains all loaded packages and versions. 
 ```{r}
 sessionInfo()
 ```
