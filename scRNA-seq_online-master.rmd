@@ -384,9 +384,9 @@ Look inside your project space and you will find that a directory structure has 
 
 ```
 single_cell_rnaseq/
-âââ data
-âââ results
-âââ figures
+├── data
+├── results
+└── figures
 ```
 
 ### New script
